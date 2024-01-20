@@ -134,7 +134,7 @@ class SignInScreen extends StatelessWidget {
                         ),
                         onPressed: () {
                           Navigator.of(context).push(MaterialPageRoute(builder: (context) {
-                            return const SignUpScreen();
+                            return SignUpScreen();
                           }),);
                         },
                         child: const Text(
