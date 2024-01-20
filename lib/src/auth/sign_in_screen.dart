@@ -1,6 +1,7 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:kitanda/src/auth/components/custom_textfield.dart';
+import 'package:kitanda/src/base/base_screen_dart.dart';
 import 'package:kitanda/src/config/custom_colors.dart';
 import 'sign_up_screen.dart';
 
@@ -84,7 +85,11 @@ class SignInScreen extends StatelessWidget {
                             shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(18),
                         )),
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (c) {
+                            return const BaseScreen();
+                          }),);
+                        },
                         child: const Text(
                           'Entrar',
                           style: TextStyle(fontSize: 18),
