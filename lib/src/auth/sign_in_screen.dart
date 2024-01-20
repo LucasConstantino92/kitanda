@@ -2,6 +2,7 @@ import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:kitanda/src/auth/components/custom_textfield.dart';
 import 'package:kitanda/src/config/custom_colors.dart';
+import 'sign_up_screen.dart';
 
 class SignInScreen extends StatelessWidget {
   const SignInScreen({super.key});
@@ -131,7 +132,11 @@ class SignInScreen extends StatelessWidget {
                             borderRadius: BorderRadius.circular(18),
                           ),
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+                            return SignUpScreen();
+                          }),);
+                        },
                         child: const Text(
                           'Criar conta',
                           style: TextStyle(fontSize: 18),
